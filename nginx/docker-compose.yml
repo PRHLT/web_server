@@ -1,0 +1,17 @@
+
+version: "3.3"
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /home/webmaster/nginx/web.conf:/etc/nginx/sites-enabled/web.conf
+      - /home/webmaster/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /home/webmaster/nginx/certificado.pem:/etc/nginx/ssl/certificado.pem
+      - /home/webmaster/nginx/certificado.key:/etc/nginx/ssl/certificado.key
+      - /home/webmaster/nginx/https.conf:/etc/nginx/ssl/https.conf
+      - /home/webmaster/nginx/dhparam2048.pem:/etc/nginx/ssl/dhparam2048.pem
+    restart: always

@@ -35,5 +35,18 @@ sudo scr/personal_spaces.sh username
 
 Besides granting the user access, it will create a `public_html` folder inside their home directory. They can create their own personal website inside that folder.
 
+### Back-up
+`scr/personal_spaces_backup.sh` constains a script for saving a back-up of the personal spaces. To set it up, you just need to edit the variables `username` and `server` with the data of your back-up server and programe a daemon with root permissions:
+
+```
+sudo crontab -e
+```
+
+Here's an example of a configuration:
+
+```
+0 0 * * * /home/webmaster/scr/personal_spaces_backup.sh
+```
+
 ## PRHLT web
 The [PRHLT](https://www.prhlt.upv.es/) web run's through a separate docker which has an Apache server. The Nginx server it's set up to proxy pass petitions to it through port 8000.

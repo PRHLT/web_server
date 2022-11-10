@@ -2,7 +2,7 @@
 This repository contains all the scripts and info to run the [PRHLT](https://www.prhlt.upv.es/)'s web server and its member's personal web spaces (https://www.prhlt.upv.es/~username).
 
 ## Nginx configuration
-The web server is based on Nginx running trhough docker-compose. It is expected to be located in a `nginx` folder at the home's directory of a user named `webmaster`.
+The web server is based on Nginx running through docker-compose. It is expected to be located in an `nginx` folder at the home's directory of a user named `webmaster`.
 
 ### SSL
 Prior to running the Nginx server, you need to place the following files into your `nginx` directory:
